@@ -192,8 +192,6 @@ class WPUploadHelper{
 $wp_upload_helper = new WPUploadHelper();
 $wp_upload_helper = $this->quick_upload('folder/folder',$_FILE['test'],'filename',200,200,true,99);
 
-
-
 // // Basic Configuration
 // $wp_upload_helper->set_folder('test-folder-2021/tester'); 
 // $wp_upload_helper->set_file($_FILE['ddd']); 
