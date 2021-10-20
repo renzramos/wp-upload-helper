@@ -30,16 +30,13 @@ class WPUploadHelper{
     private $upload_wp_media_attachment_id;
 
     public function __contruct(){
-
-        
-
+        $this->upload_root_dir = wp_upload_dir();
+        $this->upload_dir = $this->upload_root_dir['basedir'];
+        $this->upload_url = $this->upload_root_dir['baseurl']
     }
     
     public function set_folder($folder = 'folder-name'){
 
-        $this->upload_root_dir = wp_upload_dir();
-        $this->upload_dir = $this->upload_root_dir['basedir'];
-        $this->upload_url = $this->upload_root_dir['baseurl'];
         $this->upload_folder_dir = $this->upload_dir . '/' . $folder;
         $this->upload_folder_url = $this->upload_url . '/' . $folder;
 
